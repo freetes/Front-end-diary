@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>ch01</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div>
+      <div class="header"></div>
+      <div class="content">
+        <button onclick="changeMode()">Change mode</button>
+      </div>
+    </div>
+    <div class="footer"></div>
+
+    <script>
+      function changeMode(){
+        let div = document.querySelector('div.content')
+        
+        div.offsetHeight == 300?
+          div.style.height = '700px':
+          div.style.height = '300px'
+      }
+    </script>
+  </body>
+</html>
