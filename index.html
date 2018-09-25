@@ -8,18 +8,31 @@
   </style>
 </head>
 <body>
+  <div id="container">
 
+  </div>
   <script>
     var xhr = new XMLHttpRequest()
-    console.log('x')
     xhr.open('GET', './data.json', true)
 
     xhr.onreadystatechange = function(){
       if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
-        console.log(xhr.responseText)
-      }
-      else{
-        console.log(xhr.response)
+        let data = JSON.parse(xhr.responseText)
+
+        console.log(data)
+
+        const container = document.querySelector('div#container')
+        let div = document.createElement('div')
+        for(let item of data.chs){
+          div.innerHTML = `
+            <a href="${item.path}">${item.title}</a>
+            <p>
+              <span>${item.description}</span>
+              <span>${item.date}</span>
+            </p>
+          `
+          container.appendChild(div)
+        }
       }
     }
     xhr.send()
