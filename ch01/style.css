@@ -3,8 +3,9 @@
   padding: 0;
 }
 
+/* Container style */
 body{
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: 100%;
   display: flex;
@@ -18,7 +19,7 @@ body > *{
 }
 
 div.header{
-  height: 200px;
+  height: 100px;
   background-color: red;
 }
 div.content{
