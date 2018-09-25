@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>前端日记</title>
+  <style>
+    *{margin: 0; padding: 0;}
+  </style>
+</head>
+<body>
+
+  <script>
+    var xhr = new XMLHttpRequest()
+    console.log('x')
+    xhr.open('GET', './data.json', true)
+
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+        console.log(xhr.responseText)
+      }
+      else{
+        console.log(xhr.response)
+      }
+    }
+    xhr.send()
+  </script>
+</body>
+</html>
