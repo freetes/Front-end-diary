@@ -9,6 +9,8 @@
       let chs = data.chs
       const container = document.querySelector('div#container')
   
+      // 按照日期排序
+      chs.sort((a, b)=>new Date(b.date) - new Date(a.date))
       for(let item of chs){
         let div = document.createElement('div')
   
