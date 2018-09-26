@@ -1,6 +1,7 @@
 (function getData(){
+  var url = 'https://freetes.github.io/Front-end-diary/'
   var xhr = new XMLHttpRequest()
-  xhr.open('GET', './data.json', true)
+  xhr.open('GET', url+'data.json', true)
   
   xhr.onreadystatechange = function(){
     if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
