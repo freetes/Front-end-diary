@@ -10,11 +10,11 @@ body{
 body > div{
   background-color: #f1f1f1;
   width: 200px;
-  height: 100%;
+  min-height: 100%;
   overflow: auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 div#container{
   width: 180px;
