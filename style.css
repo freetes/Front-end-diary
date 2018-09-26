@@ -24,6 +24,7 @@ div#container{
   justify-content: flex-start;
 }
 div#container > div{
+  margin: 5px 0;
   border-bottom: 1px solid gray;
 }
 div#container > div:last-child{
@@ -37,14 +38,6 @@ div#container > div > p{
   font-weight: lighter;
   font-size: 14px;
   color: gray;
-}
-div#container > div > p:first{
-  line-height: 16px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical; 
-  -webkit-line-clamp: 5; 
-  max-height: 48px;
 }
 footer{
   margin: 10px 0;
