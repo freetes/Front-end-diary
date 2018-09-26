@@ -37,7 +37,7 @@ div#container > div > a{
 div#container > div > p{
   font-weight: lighter;
   font-size: 14px;
-  color: gray;
+  color: #555;
 }
 footer{
   margin: 10px 0;
