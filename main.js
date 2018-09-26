@@ -18,6 +18,7 @@
         `
         container.appendChild(div)
       }
+      document.querySelector('div#container a').click()
     }
   }
 
