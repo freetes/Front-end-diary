@@ -22,10 +22,17 @@
       justify-content: flex-start;
     }
     div#container{
-      width: 200px;
+      width: 180px;
+      margin: 5px 10px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+    }
+    div#container > div{
+      border-bottom: 1px solid gray;
+    }
+    div#container:last-child{
+      border: none;
     }
     div#container > div > a{
       font-size: 18px;
@@ -33,7 +40,7 @@
     }
     div#container > div > p{
       font-weight: lighter;
-      font-size: 12px;
+      font-size: 14px;
       color: gray;
     }
     footer{
