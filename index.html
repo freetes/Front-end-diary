@@ -69,10 +69,11 @@
       if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
         let data = JSON.parse(xhr.responseText)
         let chs = data.chs
-
         const container = document.querySelector('div#container')
-        let div = document.createElement('div')
+
         for(let item of chs){
+          let div = document.createElement('div')
+
           div.innerHTML = `
             <a onclick="goto('/Front-end-diary/${item.path}')">${item.title}</a>
             <p>
