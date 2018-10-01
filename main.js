@@ -1,7 +1,7 @@
 (function getData(){
-  var url = 'https://freetes.github.io/Front-end-diary/'
+  var baseUrl = 'https://freetes.github.io/Front-end-diary/'
   var xhr = new XMLHttpRequest()
-  xhr.open('GET', url+'data.json', true)
+  xhr.open('GET', baseUrl+'data.json', true)
   
   xhr.onreadystatechange = function(){
     if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
@@ -15,7 +15,7 @@
         let div = document.createElement('div')
   
         div.innerHTML = `
-          <a onclick="goto('/Front-end-diary/${item.path}/')">${item.title}</a>
+          <a onclick="goto('${baseUrl}/${item.path}/')">${item.title}</a>
           <p>${item.description}</p>
           <p style="text-align: right">${item.date}</p>
         `
