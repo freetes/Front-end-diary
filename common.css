@@ -1,0 +1,22 @@
+/* 
+  A common style file
+  author: freetes
+  date: 2018-10-7 18:53
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
