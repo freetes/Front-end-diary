@@ -3,16 +3,66 @@
 <head>
   <title>date表单控件</title>
   <link rel="stylesheet" href="../common.css">
+  <style>
+    div.date-picker-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      border: 1px solid lightgrey;
+
+      display: none;
+    }
+    div.date-picker-container > div.date-picker-content{
+      display: flex;
+      flex-direction: column;
+    }
+    div.date-picker-container > div.date-picker-content > div{
+      width: 350px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    div.date-picker-container > div.date-picker-content > div > span{
+      width: 50px;
+      height: 20px;
+      text-align: center;
+    }
+    div.date-picker-container > div.date-picker-content > div > span.gray{
+      color: lightgray;
+    }
+    
+  </style>
 </head>
 <body>
-  <div>
-    <label for="">日期选择器</label>
-    <div>
-      
+  <div class="date-picker">
+    <div onclick="showSelector(this)">
+      <label for="date-picker-input">日期选择器</label>
+      <input id="date-picker-input" type="text" name="" readonly>
     </div>
-    <input type="text" name="" readonly onclick="showSelector(this)">
+    <div class="date-picker-container">
+      <div class="date-picker-selector">
+        <label for="year">年份：</label>
+        <input type="number" id="year" onchange="changeSelector()">
+        <label for="year">月份：</label>
+        <input type="number" id="month" onchange="changeSelector()">
+      </div>
+      <div class="date-picker-content">
+        <div class="date-picker-title">
+          <span>周日</span>
+          <span>周一</span>
+          <span>周二</span>
+          <span>周三</span>
+          <span>周四</span>
+          <span>周五</span>
+          <span>周六</span>
+        </div>
+        <div class="date-picker-item"></div>
+      </div>
+    </div>
   </div>
 
+  <script src="date.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
