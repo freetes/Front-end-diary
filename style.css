@@ -5,6 +5,7 @@ body{
   height: 100%;
   display: flex;
   font-display: row;
+  font-family: 'Fira Mono';
 }
 
 body > div{
