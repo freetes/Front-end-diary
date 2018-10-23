@@ -15,12 +15,13 @@
         let div = document.createElement('div')
   
         div.innerHTML = `
-          <a onclick="goto('${baseUrl}/${item.path}/')">${item.title}</a>
+          <a onclick="goto('${baseUrl}/${item.path}/', this)">${item.title}</a>
           <p>${item.description}</p>
           <p style="text-align: right">${item.date}</p>
         `
         container.appendChild(div)
       }
+      document.querySelector('div#container div').setAttribute('class', 'selected')
       document.querySelector('div#container a').click()
     }
   }
@@ -30,6 +31,10 @@
 
 var iframe = document.querySelector('iframe')
 
-function goto(url){
+function goto(url, node){
+  // change style
+  document.querySelector('div.selected').removeAttribute('class')
+  node.parentNode.setAttribute('class', 'selected')
+  
   iframe.setAttribute('src', url)
 }

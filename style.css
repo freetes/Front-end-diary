@@ -6,6 +6,8 @@ body{
   display: flex;
   font-display: row;
   font-family: 'Fira Mono';
+  font-weight: lighter;
+  line-height: 22px;
 }
 
 body > div{
@@ -23,16 +25,28 @@ div#container{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 180px;
+  width: 200px;
   flex: 1 1 auto;
   max-height: 90%;
   overflow: auto;
-  margin: 5px 10px;
+  margin: 5px 0;
+}
+div#container > h3{
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-bottom: 1px solid #42b983;
+  color: #42b983;
 }
 div#container > div{
-  width: 100%;
-  margin: 5px 0;
+  width: 180px;
+  margin: 5px 10px;
   border-bottom: 1px solid gray;
+  color: #555;
+}
+div#container > div.selected{
+  color: #42b983;
 }
 div#container > div:last-child{
   border: none;
