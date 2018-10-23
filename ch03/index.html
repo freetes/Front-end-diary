@@ -4,10 +4,33 @@
   <title>666 to 六百六十六</title>
   <link rel="stylesheet" href="../common.css">
   <style>
+    #container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container > *{
+      margin: 10px 10px;
+      padding: 10px 10px;
+    }
   </style>
 </head>
 <body>
-  Here is a chapter about turn 666 to '六百六十六'.
-  2018.10.22
+  <p>Here is a chapter about turn 666 to '六百六十六'.</p>
+  <p>2018.10.22</p>
+
+  <div id="container">
+    <div>
+      <label for="numberInput">阿拉伯数字：</label>
+      <input type="number" min="0" max="999999999999" name="" id="numberInput" onchange="showNumber(this.value)">
+    </div>
+    <span>to</span>
+
+    <span id="result"></span>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
