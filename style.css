@@ -36,8 +36,8 @@ div#container > h3{
   line-height: 26px;
   font-weight: bold;
   padding: 10px 10px;
-  border-bottom: 1px solid #42b983;
-  color: #42b983;
+  border-bottom: 1px solid black;
+  color: black;
 }
 div#container > div{
   width: 180px;
@@ -45,11 +45,9 @@ div#container > div{
   color: #555;
 }
 div#container > div.selected{
-  width: 170px;
-  padding: 0 5px;
-  color: #42b983;
-  font-weight: 400;
-  border-left: 1px solid #42b983;
+  width: 180px;
+  color: black;
+  font-weight: bold;
 }
 
 div#container > div > a{
