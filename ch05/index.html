@@ -5,22 +5,50 @@
   <link rel="stylesheet" href="../common.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    #container{
+    .container{
+      width: 80%;
+      overflow-x: auto;
+    }
+    .btns{
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
     }
+    .btns > .btn{
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: 3px 5px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      font-size: 14px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
 
-    #container > *{
-      margin: 10px 10px;
-      padding: 10px 10px;
+    table{
+      width: 100%;
+    }
+    thead{
+      border-bottom: 1px solid gray;
+    }
+    td, th{
+      white-space: nowrap;
     }
   </style>
 </head>
 <body>
   <p>Here is a chapter about 「how to use js-xlsx」~~~.</p>
-  <input type="file" name="" id="">
+  <div class="btns">
+    <input type="file" name="" id="">
+    <a class="btn" href="./testFile.xlsx" download="testFile">下载测试文件</a>
+    <button class="btn" onclick="exportFile()">导出Excel</button>
+  </div>
+
+  <div class="container">
+    <table></table>
+  </div>
 
   <script src="xlsx.full.min.js"></script>
   <script src="main.js"></script>
