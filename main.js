@@ -1,5 +1,5 @@
 (function getData(){
-  var baseUrl = 'https://freetes.github.io/Front-end-diary/'
+  var baseUrl = 'https://realleonardo.github.io/Front-end-diary/'
   var xhr = new XMLHttpRequest()
   xhr.open('GET', baseUrl+'data.json', true)
   
